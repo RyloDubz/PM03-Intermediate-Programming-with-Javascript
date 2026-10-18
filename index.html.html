@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Department Contact Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Department Contact Form</h1>
+
+        <form id="contactForm">
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="department">Department:</label>
+            <select id="department" required>
+                <option value="">Select a department</option>
+                <option value="IT">IT</option>
+                <option value="HR">HR</option>
+                <option value="Finance">Finance</option>
+                <option value="Sales">Sales</option>
+            </select>
+
+            <p id="departmentMessage"></p>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="issueCategory">Issue Category:</label>
+            <select id="issueCategory" required>
+                <option value="">Select an issue</option>
+                <option value="Technical">Technical</option>
+                <option value="Account">Account</option>
+                <option value="General">General</option>
+            </select>
+
+            <label for="message">Message:</label>
+            <textarea id="message" maxlength="500" required></textarea>
+
+            <p id="messageCount">0 / 500 characters</p>
+
+            <div class="dynamic-section">
+                <h2>Additional Issues</h2>
+
+                <input type="text" id="additionalIssue" placeholder="Enter an additional issue">
+
+                <button type="button" id="addIssueButton">
+                    Add Issue
+                </button>
+
+                <ul id="issueList"></ul>
+            </div>
+
+            <button type="submit">Submit Form</button>
+
+            <p id="formMessage"></p>
+
+        </form>
+
+
+        <div class="api-section">
+
+            <h2>API Data</h2>
+
+            <button type="button" id="loadApiButton">
+                Load API Data
+            </button>
+
+            <p id="apiStatus"></p>
+
+            <div id="apiData"></div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
